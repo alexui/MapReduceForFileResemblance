@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="MapReduce" default="compile" basedir=".">
+
+    <target name="jar" depends="compile">
+
+        <jar destfile="mapreduce.jar" basedir="build/classes">
+		<manifest>
+			<attribute name="Main-Class" value = "MapReduce"/>
+		</manifest>
+        </jar>
+
+    </target>
+    <target name="clean">
+        <delete dir="build"/>
+    </target>
+
+    <target name="compile">
+        <mkdir dir="build/classes"/>
+        <javac srcdir="src" destdir="build/classes"/>
+    </target>
+
+
+
+</project>
